@@ -45,7 +45,7 @@ class SchumacherFM_Markdown_Model_Observer_Adminhtml_Block
     public function alterTextareaBlockTemplate(Varien_Event_Observer $observer)
     {
         $this->_helper = Mage::helper('markdown');
-        if ($this->_helper->isDisabled()) {
+        if ($this->_helper->isDisabled() || $this->_helper->isParserOnly()) {
             return NULL;
         }
 
