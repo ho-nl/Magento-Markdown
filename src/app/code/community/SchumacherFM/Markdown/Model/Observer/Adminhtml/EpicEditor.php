@@ -28,7 +28,7 @@ class SchumacherFM_Markdown_Model_Observer_Adminhtml_EpicEditor
      */
     public function injectEpicEditor(Varien_Event_Observer $observer)
     {
-        if (Mage::helper('markdown')->isDisabled() || !Mage::helper('markdown')->isEpicEditorEnabled()) {
+        if (Mage::helper('markdown')->isDisabled() || !Mage::helper('markdown')->isEpicEditorEnabled() || Mage::helper('markdown')->isParserOnly()) {
             return NULL;
         }
 

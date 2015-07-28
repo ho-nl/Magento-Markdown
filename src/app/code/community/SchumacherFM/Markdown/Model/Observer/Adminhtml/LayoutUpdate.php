@@ -19,7 +19,7 @@ class SchumacherFM_Markdown_Model_Observer_Adminhtml_LayoutUpdate
      */
     public function injectMarkdownFiles(Varien_Event_Observer $observer)
     {
-        if (Mage::helper('markdown')->isDisabled()) {
+        if (Mage::helper('markdown')->isDisabled() || Mage::helper('markdown')->isParserOnly()) {
             return NULL;
         }
 

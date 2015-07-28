@@ -124,6 +124,16 @@ class SchumacherFM_Markdown_Helper_Data extends Mage_Core_Helper_Abstract
      *
      * @return bool
      */
+    public function isParserOnly()
+    {
+        return Mage::getStoreConfigFlag('markdown/markdown/enable_parser_only');
+    }
+
+    /**
+     * Check if Markdown is enabled for emails
+     *
+     * @return bool
+     */
     public function isEmailDisabled()
     {
         return !Mage::getStoreConfigFlag('markdown/markdown/enable_email');
