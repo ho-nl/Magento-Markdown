@@ -46,17 +46,6 @@
                 <class>SchumacherFM_Markdown_Helper</class>
             </markdown>
         </helpers>
-        <events>
-            <cms_wysiwyg_config_prepare>
-                <observers>
-                    <markdown>
-                        <type>singleton</type>
-                        <class>markdown/markdown_observer</class>
-                        <method>disableWysiwyg</method>
-                    </markdown>
-                </observers>
-            </cms_wysiwyg_config_prepare>
-        </events>
     </global>
     <frontend>
         <events>
